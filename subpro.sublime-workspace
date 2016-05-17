@@ -1,0 +1,1496 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"COLLI",
+				"COLLIDER_TYPE_CIRCLE〔variable〕"
+			],
+			[
+				"faugment",
+				"fAugmentTracker"
+			],
+			[
+				"fAugmentTracker",
+				"fAugmentTrackerIndex"
+			],
+			[
+				"string_ges",
+				"STRING_GUESSNUMBER_ANSWER	(statement)"
+			],
+			[
+				"STRING_GUESS",
+				"STRING_GUESSNUMBER_ANSWER	(statement)"
+			],
+			[
+				"STRING",
+				"STRING_GUESSNUMBER_ANSWER	(statement)"
+			],
+			[
+				"STRING_GUES",
+				"STRING_GUESSNUMBER_TRY	(statement)"
+			],
+			[
+				"push",
+				"push_back	func"
+			],
+			[
+				"device",
+				"deviceNum"
+			],
+			[
+				"devie",
+				"deviceNum"
+			],
+			[
+				"p",
+				"p	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 294,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "SceneMainMenu.py",
+			"settings":
+			{
+				"buffer_size": 798,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Scene.py",
+			"settings":
+			{
+				"buffer_size": 168,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameObjectButton.py",
+			"settings":
+			{
+				"buffer_size": 370,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameObject.py",
+			"settings":
+			{
+				"buffer_size": 340,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameComponentImage.py",
+			"settings":
+			{
+				"buffer_size": 421,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameComponentButton.py",
+			"settings":
+			{
+				"buffer_size": 841,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "GameComponent.py",
+			"settings":
+			{
+				"buffer_size": 166,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Repos/pygame/test.py",
+			"settings":
+			{
+				"buffer_size": 1251,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+					""
+				],
+				[
+					"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/C++11/C++11.sublime-build",
+					""
+				],
+				[
+					"Packages/C++11/C++11.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/C++ Starting Kit/C++ - Starting Kit.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 467.0,
+		"last_filter": "python",
+		"selected_items":
+		[
+			[
+				"python",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"PYTHON",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"pyt",
+				"SublimeREPL: Python"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"C++",
+				"Build With: C++ Single File - Run"
+			],
+			[
+				"shell",
+				"SublimeREPL: Shell"
+			],
+			[
+				"run console",
+				"SublimeREPL: Python - Sublime Text Console"
+			],
+			[
+				"pytho",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"pyth",
+				"Build With: Python"
+			],
+			[
+				"",
+				"Build With: C++ - Starting Kit - Run"
+			],
+			[
+				"remove package",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"python import",
+				"Python Refactor: Organize Imports"
+			],
+			[
+				"build",
+				"Build With: C++11"
+			],
+			[
+				"c++",
+				"Build With: C++ Single File - Run"
+			],
+			[
+				"pytohn",
+				"Python Refactor: Rename"
+			],
+			[
+				"sublimerepl python",
+				"SublimeREPL: Python"
+			],
+			[
+				"pythin",
+				"Set Syntax: PythonImproved"
+			],
+			[
+				"python run",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"php",
+				"SublimeREPL: PHP"
+			],
+			[
+				"preview",
+				"Markdown HTML Preview"
+			],
+			[
+				"ruby",
+				"SublimeREPL: Ruby"
+			],
+			[
+				"python ru",
+				"SublimeREPL: Python - RUN current file"
+			]
+		],
+		"width": 695.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Repos/noname/main.py",
+		"/C/Repos/nonamed/collider.py",
+		"/C/Repos/nonamed/main.py",
+		"/C/Repos/nonamed/GameComponent.py",
+		"/C/Repos/nonamed/Image2d.py",
+		"/C/Repos/nonamed/GameObject.py",
+		"/C/Repos/nonamed/test.py",
+		"/C/Repos/nonamed/Scene.py",
+		"/C/Repos/nonamed/Scene_mainmenu.py",
+		"/C/Repos/nonamed/Scene_firstscene.py",
+		"/C/Repos/nonamed/button.py",
+		"/C/Repos/pygame/test.py",
+		"/C/Repos/pygame/tetris.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/ex08/sample2.py",
+		"/C/Repos/nonamed/gameObject.py",
+		"/C/Repos/pygame/test3.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/ex08/guiversion.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/tmp/homework08_2016025241.py",
+		"/C/Python27/DLLs/setsu/p/ext.py",
+		"/C/Repos/pygame/test2.py",
+		"/C/Repos/algostudy/policecar.cpp",
+		"/C/Users/Yeong Jin/Documents/Machine/APpredictor.py",
+		"/C/Users/Yeong Jin/Documents/Machine/NaiveBayes.py",
+		"/C/Repos/algostudy/bfs.cpp",
+		"/C/Repos/algostudy/gusul.cpp",
+		"/C/Users/Yeong Jin/Documents/Machine/rssi.dat",
+		"/C/Users/Yeong Jin/Documents/Machine/APpredictor",
+		"/C/Repos/algostudy/APpredictor.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/HackThePassword.py",
+		"/C/Users/Yeong Jin/Documents/tmp/tmphtml.html",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/ex08/sample.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/ex08/sample_.py",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/BracketHighlighter/bh_wrapping.sublime-settings",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/tmp/homework07_2016025241.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/test.py",
+		"/C/Repos/test.cpp",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/encrypt.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/base64enc.py",
+		"/C/Users/Yeong Jin/Documents/Hacking/Reversing/upxunpacker/upx.html",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/test",
+		"/C/Repos/algostudy/test.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/tmp/homework06_2016025241.py",
+		"/C/Repos/algostudy/suffixTree.py",
+		"/C/Repos/algostudy/ChangedTheWord.py",
+		"/C/Users/Yeong Jin/Documents/Machine/simpleSVM.py",
+		"/C/Repos/algostudy/fibo.cpp",
+		"/C/Repos/algostudy/fibo.py",
+		"/C/Repos/algostudy/fibo2.py",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/User/Slack.sublime-settings",
+		"/C/Repos/CMove/cmove.cpp",
+		"/C/Repos/CMove/test.cpp",
+		"/C/Repos/algostudy/test.cpp",
+		"/C/Users/Yeong Jin/Documents/Machine/simpleSVM-mine.py",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/CppBuilder/CppBuilder.sublime-settings",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/auto-save/auto_save.sublime-settings",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/User/auto_save.sublime-settings",
+		"/C/Users/Yeong Jin/Documents/Machine/simpleSVM-mine",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/User/bh_core.sublime-settings",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/test.cpp",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/hangman.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/myHangman.py",
+		"/C/Users/Yeong Jin/Documents/tmp/wargame13/Wargame13max.py",
+		"/C/Users/Yeong Jin/Documents/tmp/py.py",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/dungdal.cpp",
+		"/C/Users/Yeong Jin/Documents/Games/Taimanin Asagi Battle Arena/Taimanin Asagi Battle Arena.html",
+		"/C/Users/Yeong Jin/Documents/tmp/wargame21/war21no1pw.py",
+		"/C/Users/Yeong Jin/Documents/tmp/wargame21/war21no1id.py",
+		"/C/Users/Yeong Jin/Documents/tmp/wargame21/war21no2id.py",
+		"/C/Users/Yeong Jin/Documents/tmp/wargame21/war21no2pw.py",
+		"/C/Users/Yeong Jin/Documents/tmp/wargame13/Wargame13count.py",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/pigs.cpp",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/test.py",
+		"/C/Users/Yeong Jin/Downloads/blinka.py",
+		"/C/Users/Yeong Jin/Downloads/challege9.py",
+		"/C/Users/Yeong Jin/Downloads/manual.html",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/guitest.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/GuessTheNumber.cpp",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/blinka.py",
+		"/C/Users/Yeong Jin/Downloads/numi.py",
+		"/C/Users/Yeong Jin/Downloads/wavea.py",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/euler.cpp",
+		"/C/Users/Yeong Jin/Documents/Repos/saetak/saetak/main.cpp",
+		"/C/Users/Yeong Jin/Downloads/as.py",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/bfs.cpp",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/pcontrol.cpp",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/euler",
+		"/C/Users/Yeong Jin/AppData/Roaming/Sublime Text 3/Packages/User/CppBuilder.sublime-settings",
+		"/C/Users/Yeong Jin/Documents/Repos/Cstudy/test.cpp",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/DigitPyramid.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/DragonRealm.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/rsa.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/euler.cpp",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/Strawberry.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/BinaryStrawberry.py",
+		"/C/Users/Yeong Jin/Documents/Repos/io/smilu97.github.io/main_page.html",
+		"/C/Users/Yeong Jin/Documents/Machine/LinearRegression.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/tmp/homework05_2016025241.py",
+		"/C/Users/Yeong Jin/Documents/Hacking/Reversing/tmp/adder.cpp",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/AsteriskPrinting.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/tmp/homework04_2016025241.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/369multiplicationtable.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/Jokes.py",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/locker.cpp",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/pigs.py",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/pig.py",
+		"/C/Users/Yeong Jin/Documents/Repos/algostudy/pcon",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/newton.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/math.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/asdf.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/ReversedGuessTheNumber.py",
+		"/C/Users/Yeong Jin/Desktop/asdf.html",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/tmp/homework03_2016025241.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/tmp/homework02_2016025241.py",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/GuessTheNumber.py",
+		"/C/Users/Yeong Jin/Documents/Repos/AlphaGo/AlphaGo/models/ReversedGuessTheNumber.py",
+		"/C/Users/Yeong Jin/Documents/Repos/AlphaGo/AlphaGo/models/deep_policy.py",
+		"/C/Users/Yeong Jin/Documents/Repos/AlphaGo/AlphaGo/models/game_converter.py",
+		"/C/Users/Yeong Jin/Documents/Repos/AlphaGo/AlphaGo/models/policy.py",
+		"/C/Users/Yeong Jin/Documents/Repos/AlphaGo/AlphaGo/training/train_supervised.py",
+		"/C/Users/Yeong Jin/Documents/Repos/AlphaGo/AlphaGo/training/train_value.py",
+		"/C/Users/Yeong Jin/Documents/Repos/AlphaGo/AlphaGo/training/train_rl.py",
+		"/C/Users/Yeong Jin/Documents/Visual Studio 2015/Projects/InputMouse/source.cpp",
+		"/C/Users/Yeong Jin/Documents/Visual Studio 2015/Projects/hge16/tutorials/tutorial03/hge_tut03.cpp",
+		"/C/Users/Yeong Jin/Documents/Repos/FindRoutes/stdheaderes.h",
+		"/C/Users/Yeong Jin/Documents/LecturePdf/01소프트웨어_입문_설계/examples/MyFavoriteStuff.py"
+	],
+	"find":
+	{
+		"height": 69.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"*\n",
+			"mainmenu",
+			"myuk",
+			"center1",
+			"withSpot",
+			"1",
+			"circleCollider.radius",
+			"circleCollider.pos",
+			"self.rect",
+			"png",
+			"7",
+			"subtractRandomField",
+			"print",
+			"final",
+			"track.append",
+			"list(togo)",
+			"track.append(togo)",
+			"canUserGo",
+			")",
+			"board",
+			"moved = True",
+			"RandomPosition",
+			"fillUserAble",
+			")",
+			"1",
+			"Squre",
+			"recMap",
+			"=",
+			")",
+			"(",
+			"]",
+			"][",
+			"m",
+			"shapeToPosition",
+			"self.shapeToPosition",
+			"50",
+			"shapeToPosition",
+			"self",
+			"nowtetri_pos",
+			"nowtetri_shape",
+			"nowtetri_shape_pos",
+			"nowtetri",
+			"nowtetri_shape_pos",
+			"nowtetri",
+			"tetri[type]",
+			"decrypt",
+			"encrypt",
+			"makeDic",
+			"alpashuffle",
+			"alpaList",
+			"alpabat",
+			"wordstosay",
+			"afterChar",
+			"beforeChar",
+			"i",
+			"\n		",
+			"29",
+			";\n",
+			"for",
+			"\n=",
+			"strawberry",
+			"Strawberry",
+			"when4over",
+			"when4under",
+			"path",
+			"GetNextFruit()",
+			"strStrawberry",
+			"Drawer",
+			"getIntInput",
+			"i",
+			"row",
+			"Mid",
+			"mid",
+			"max",
+			"min",
+			"max",
+			"int",
+			"bottom",
+			"right",
+			"top",
+			"left"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 294,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								294,
+								294
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "SceneMainMenu.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 798,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								521,
+								521
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Scene.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								141,
+								141
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "GameObjectButton.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 370,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								370,
+								370
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "GameObject.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 340,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								310,
+								310
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "GameComponentImage.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								392
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "GameComponentButton.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								804,
+								804
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "GameComponent.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								117,
+								117
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "/C/Repos/pygame/test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								435,
+								435
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 975.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 39.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.687134502924,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CppBuilder":
+	{
+		"height": 32.0
+	},
+	"output.exec":
+	{
+		"height": 130.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 130.0
+	},
+	"pinned_build_system": "",
+	"project": "subpro.sublime-project",
+	"replace":
+	{
+		"height": 74.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 625.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 475.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}
