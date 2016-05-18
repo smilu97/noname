@@ -5,5 +5,6 @@ class Scene():
 		self.screen = screen
 		self.clock = clock
 		self.cam = [0,0]
-		self.objects = []
+		self.objects = {}
+		self.nextScene = self
 		

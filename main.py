@@ -1,6 +1,9 @@
 import pygame, math, sys
 from pygame.locals import *
 from SceneMainMenu import *
+from SceneMapTest import *
+
+SceneDic = {'MainMenu':SceneMainMenu, 'MapTest':SceneMapTest}
 
 if __name__ == '__main__' :
 	pygame.init()
@@ -10,3 +13,6 @@ if __name__ == '__main__' :
 	while True :
 		nowScene.Frame()
 		nowScene.Render()
+		if nowScene.nextScene != nowScene :
+			nowScene = SceneDic[nowScene.nextScene](screen, clock)
+			

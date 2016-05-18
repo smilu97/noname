@@ -11,12 +11,9 @@ class GameComponentButton(GameComponent):
 		if self.onClick != 0 :
 			for event in self.owner.owner.events :
 				if event.type == pygame.MOUSEBUTTONDOWN :
-					cam = self.owner.owner.cam
-					realSenseRect = [self.senseRect[0] - cam[0], self.senseRect[1] - cam[1], \
-										self.senseRect[2] - cam[0], self.senseRect[3] - cam[1]]
 					mousepos = pygame.mouse.get_pos()
-					if realSenseRect[0] <= mousepos[0] and mousepos[0] <= realSenseRect[2] and \
-						realSenseRect[1] <= mousepos[1] and mousepos[1] <= realSenseRect[3] :
+					if self.senseRect[0] <= mousepos[0] and mousepos[0] <= self.senseRect[2] and \
+						self.senseRect[1] <= mousepos[1] and mousepos[1] <= self.senseRect[3] :
 						self.onClick()
 					break
 	def Render(self):
