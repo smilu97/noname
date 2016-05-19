@@ -3,11 +3,11 @@ from pygame.locals import *
 from GameComponent import *
 
 class GameComponentButton(GameComponent):
-	def __init__(self, owner, onClick=0, senseRect = [0,0,0,0]):
+	def __init__(self, owner, onClick=0, senseRect = [0.0,0.0,0.0,0.0]):
 		GameComponent.__init__(self, owner)
-		self.senseRect = senseRect
+		self.senseRect = list(senseRect)
 		self.onClick = onClick
-	def Frame(self):
+	def Frame(self,dt):
 		if self.onClick != 0 :
 			for event in self.owner.owner.events :
 				if event.type == pygame.MOUSEBUTTONDOWN :
