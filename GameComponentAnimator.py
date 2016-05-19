@@ -14,25 +14,20 @@ class GameComponentAnimator(GameComponent):
 		if imagePath != '' :
 			self.Load(imagePath)
 	def Load(self, path) :
-		ifile = open(imagePath, 'r')
+		ifile = open(path + '/dat.txt', 'r')
 		rawstring = ifile.read()
 		ifile.close()
 		rawstring = rawstring.split('\n')
 		self.imageNum = int(rawstring[0])
 		self.interval = int(rawstring[1])
 		for i in range(self.imageNum) :
-			images.append(pygame.image.load('0'*(3-len(str(i))) + str(i) + '.bmp'))
-	def SetOff(self) :
-		self.able = False
-		self.nowIndex = 0
-	def SetOn(self) :
-		sefl.able = True
+			self.images.append(pygame.image.load(path + '/' + '0'*(3-len(str(i))) + str(i) + '.bmp'))
 	def Frame(self,dt):
 		if self.able :
 			self.dtcounter += dt
 			if self.dtcounter > self.interval :
 				self.nowIndex += 1
-				if self.nowIndex >= imageNum :
+				if self.nowIndex >= self.imageNum :
 					self.nowIndex = 0
 				self.dtcounter -= self.interval
 	def Render(self):

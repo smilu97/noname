@@ -6,7 +6,7 @@ CHARACTER_HORIZONTAL_SPEED = 3
 CHARACTER_JUMP_FORCE = 10.0
 CHARACTER_GRAVITY = 0.5
 class GameComponentCharacterController(GameComponent):
-	def __init__(self, owner, rect):
+	def __init__(self, owner, rect, showComponent={}):
 		GameComponent.__init__(self, owner)
 		self.ownCollider = owner.components.get('collider', 0)
 		self.vy = 0
@@ -15,12 +15,15 @@ class GameComponentCharacterController(GameComponent):
 		self.width = rect[2] - rect[0]
 		self.height = rect[3] - rect[1]
 		self.isground = False
+		self.showComponent = dict(showComponent)
+	def changeShow(self, val) :
+		for compo in self.showComponent.values() :
+			compo.able = False
+		self.showComponent[val].able = True
 	def Frame(self,dt):
 		self.vx = 0.0
 		self.vy += CHARACTER_GRAVITY
-		prevRect = (self.owner.position[0], self.owner.position[1], \
-					self.owner.position[0] + self.width,\
-					self.owner.position[1] + self.height)
+		prevRect = self.GetWorldRect()
 		if self.owner.owner.key_pressed[K_LEFT] :
 			self.vx -= CHARACTER_HORIZONTAL_SPEED
 		if self.owner.owner.key_pressed[K_RIGHT] :
@@ -37,11 +40,19 @@ class GameComponentCharacterController(GameComponent):
 			if coll != 0 :
 				hcv = coll.GetHowColliding(prevRect, self.GetWorldRect())
 				if hcv == False : continue
-				if hcv[1] == 0 : self.owner.position[0] += (hcv[0]-1) * self.vx
-				elif hcv[1] == 1 : self.owner.position[1] += (hcv[0]-1) * self.vy
+				hcv = list(hcv)
+				if hcv[1] == 0 : 
+					self.owner.position[0] += (hcv[0]-1) * self.vx
+				elif hcv[1] == 1 : 
+					self.owner.position[1] += (hcv[0]-1) * self.vy
+				# if hcv[1] == 0 : self.owner.position[0] = prevRect[0]
+				# elif hcv[1] == 1 : self.owner.position[1] = prevRect[1]
 				if hcv[1] == 1 and self.vy > 0 :
 					self.isground = True
-					self.owner.position[1] = prevRect[1]
+		if self.vx == 0 :
+			self.changeShow('idle')
+		else :
+			self.changeShow('run')
 		if self.isground :
 			self.vy = 0
 	def Render(self) :

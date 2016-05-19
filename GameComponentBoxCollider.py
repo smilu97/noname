@@ -8,16 +8,16 @@ class GameComponentBoxCollider(GameComponent):
 		self.rect = rect
 		self.colliderType = 'box'
 	def GetHowColliding(self, prevRect, otherRect) :
-		epsilon = 0.001
+		epsilon = 0.0000001
 		myRect = self.GetWorldRect()
 		isDown = isRight = False
-		if myRect[3] <= otherRect[1] : # Down
+		if myRect[3]-epsilon <= otherRect[1] : # Down
 			return False
-		if otherRect[3] <= myRect[1] : # Up
+		if otherRect[3] <= myRect[1]+epsilon : # Up
 			return False
-		if myRect[2] <= otherRect[0] : # Right
+		if myRect[2]-epsilon <= otherRect[0] : # Right
 			return False
-		if otherRect[2] <= myRect[0] : # Left 
+		if otherRect[2] <= myRect[0] + epsilon : # Left 
 			return False
 		rdx = rdy = False
 		if myRect[3] <= prevRect[1] : # Down
@@ -30,11 +30,11 @@ class GameComponentBoxCollider(GameComponent):
 			rdx = otherRect[2] - myRect[0]
 		if rdx != False :
 			mdx = otherRect[0] - prevRect[0]
-			ddx = mdx / rdx
+			ddx = rdx / mdx
 			ddx = 1 - ddx
 		if rdy != False :
 			mdy = otherRect[1] - prevRect[1]
-			ddy = mdy / rdy
+			ddy = rdy / mdy
 			ddy = 1 - ddy
 		if rdx == False and rdy != False :
 			return (ddy-epsilon, 1)

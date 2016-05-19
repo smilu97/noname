@@ -9,8 +9,11 @@ class GameComponentImage(GameComponent):
 		pass
 	def Render(self) :
 		if self.able :
-			screen = self.owner.owner.screen
-			cam = self.owner.owner.cam
-			printPos = (self.position[0] + self.owner.position[0] - cam[0], \
-						self.position[1] + self.owner.position[1] - cam[1])
-			screen.blit(self.image, printPos)
+			if self.owner.static == False:
+				screen = self.owner.owner.screen
+				cam = self.owner.owner.cam
+				printPos = (self.position[0] + self.owner.position[0] - cam[0], \
+							self.position[1] + self.owner.position[1] - cam[1])
+				screen.blit(self.image, printPos)
+			else :
+				self.owner.owner.screen.blit(self.image, self.position)
