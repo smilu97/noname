@@ -146,6 +146,9 @@ class SceneTetris(Scene):
 
 	def Frame(self):
 		self.counter += clock.tick(30)
+		if not self.dumpTime :
+			self.dumpTime = True
+			self.counter = 0
 		if self.counter > 1000 :
 			if not self.tile.move(self.tile.nowtetri_pos[0], self.tile.nowtetri_pos[1]+1) :
 				self.gm.checkCompleteLine(self.tile)
@@ -161,9 +164,8 @@ class SceneTetris(Scene):
 				if event.key == K_LEFT :
 					self.tile.move(self.tile.nowtetri_pos[0]-1, self.tile.nowtetri_pos[1])
 				if event.key == K_DOWN :
-					if not self.tile.move(self.tile.nowtetri_pos[0], self.tile.nowtetri_pos[1]+1) :
-						self.gm.checkCompleteLine(self.tile)
-						self.tile.makeTetri([5,2], tetri[random.randint(0,6)])
+					self.tile.move(self.tile.nowtetri_pos[0], self.tile.nowtetri_pos[1]+1)
+					self.counter = 0
 				if event.key == K_UP :
 					self.tile.RotateTetri()
 				if event.key == K_SPACE :

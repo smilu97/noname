@@ -5,8 +5,8 @@ from GameComponent import *
 CHARACTER_HORIZONTAL_SPEED = 3
 CHARACTER_JUMP_FORCE = 10.0
 CHARACTER_GRAVITY = 0.5
-class GameComponentCharacterController(GameComponent):
-	def __init__(self, owner, rect, showComponent={}):
+class GameComponentCharacterController(GameComponent) :
+	def __init__(self, owner, rect, showComponent={}) :
 		GameComponent.__init__(self, owner)
 		self.ownCollider = owner.components.get('collider', 0)
 		self.vy = 0
@@ -35,20 +35,23 @@ class GameComponentCharacterController(GameComponent):
 		self.owner.position[0] += self.vx
 		self.owner.position[1] += self.vy
 		self.isground = False
-		for obj in self.owner.owner.objects.values() :
+		for obj in DecomposeList(self.owner.owner.objects.values()) :
+			if obj == self.owner : continue
 			coll = obj.components.get('collider', 0)
 			if coll != 0 :
-				hcv = coll.GetHowColliding(prevRect, self.GetWorldRect())
-				if hcv == False : continue
-				hcv = list(hcv)
-				if hcv[1] == 0 : 
-					self.owner.position[0] += (hcv[0]-1) * self.vx
-				elif hcv[1] == 1 : 
-					self.owner.position[1] += (hcv[0]-1) * self.vy
-				# if hcv[1] == 0 : self.owner.position[0] = prevRect[0]
-				# elif hcv[1] == 1 : self.owner.position[1] = prevRect[1]
-				if hcv[1] == 1 and self.vy > 0 :
-					self.isground = True
+				if not coll.static :
+					hcv = coll.GetHowColliding(prevRect, self.GetWorldRect())
+					if hcv == False : continue
+					hcv = list(hcv)
+					if hcv[1] == 0 : 
+						self.owner.position[0] += (hcv[0]-1) * self.vx
+					elif hcv[1] == 1 : 
+						self.owner.position[1] += (hcv[0]-1) * self.vy
+					if hcv[1] == 1 :
+						if self.vy > 0 :
+							self.isground = True
+						else :
+							self.vy = 0
 		if self.vx == 0 :
 			self.changeShow('idle')
 		else :

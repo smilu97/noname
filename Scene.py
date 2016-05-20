@@ -1,5 +1,6 @@
 from GameObjectButton import *
 from GameObjectPlayer import *
+from GameObjectBullet import *
 
 NEXTSCENE_POP = 0
 NEXTSCENE_ERASE = -1
@@ -15,6 +16,7 @@ class Scene():
 		self.nextSceneState = NEXTSCENE_ERASE
 		self.player = player
 		self.dt = 0
+		self.dumpTime = False
 	def NextSceneInit(self) :
 		self.nextScene = self
 		self.nextSceneState = NEXTSCENE_ERASE

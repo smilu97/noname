@@ -15,6 +15,9 @@ class SceneMainMenu(Scene):
 		self.testvalue = 3
 	def Frame(self) :
 		self.dt = self.clock.tick(60)
+		if not self.dumpTime :
+			self.dumpTime = True
+			self.dt = 0
 		self.events = pygame.event.get()
 		self.key_pressed = pygame.key.get_pressed()
 		for event in self.events :

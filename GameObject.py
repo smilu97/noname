@@ -5,6 +5,8 @@ from GameComponentCharacterController import *
 from GameComponentCameraController import *
 from GameComponentAnimator import *
 from GameComponentSpeech import *
+from GameComponentBulletController import *
+from GameComponentCharacterGun import *
 
 class GameObject():
 	def __init__(self, owner, position=[0.0,0.0], components={}, name=''):
