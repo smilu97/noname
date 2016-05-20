@@ -16,5 +16,5 @@ class GameComponent():
 				self.position[1] + self.owner.position[1])
 	def Frame(self,dt):
 		pass
-	def Redner(self):
+	def Render(self):
 		pass

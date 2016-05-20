@@ -1,14 +1,15 @@
-import pygame, math, sys
+import pygame, math, sys, random
 from pygame.locals import *
 from GameComponent import *
 
 class GameComponentCharacterGun(GameComponent):
-	def __init__(self, owner, bulletContainer, bulletClass, bulletImage, size):
+	def __init__(self, owner, bulletContainer, bulletClass, bulletImage, baseObject, size):
 		GameComponent.__init__(self,owner)
 		self.bulletContainer = bulletContainer
 		self.bulletClass = bulletClass
 		self.bulletImage = bulletImage
 		self.size = size
+		self.baseObject = baseObject
 	def Frame(self, dt):
 		for event in self.owner.owner.events :
 			if hasattr(event, 'key') :
@@ -16,7 +17,8 @@ class GameComponentCharacterGun(GameComponent):
 					if event.key == K_q :
 						self.MakeBullet()
 	def MakeBullet(self) :
-		bullet = self.bulletClass(self.owner.owner, list(self.baseObject.position), self.bulletImage, \
-					self.size)
-		bullet.index = len(bulletContainer)
-		bulletContainer.append(bullet)
+		bullet = self.bulletClass(self.owner.owner, \
+					list([self.baseObject.position[0], self.baseObject.position[1] - 10]),\
+					 self.bulletImage, self.size, self.owner.owner.objects['player'].horizontalDirection)
+		bullet.key = random.random()
+		self.bulletContainer[bullet.key] = bullet

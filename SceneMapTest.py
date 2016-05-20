@@ -47,7 +47,15 @@ class SceneMapTest(Scene):
 		self.objects['player'].components['image'].able = False
 		self.objects['player'].components['collider'] = GameComponentBoxCollider(self.objects['player'], \
 															(0.0,0.0,40.0,40.0))
-		self.objects['bulletContainer'] = []
+		# bullet[]
+		bulletContainer = {}
+		characterGunObject = GameObject(self,name='gun')
+		characterGunComponent = GameComponentCharacterGun(characterGunObject,bulletContainer, \
+									GameObjectBullet, pygame.image.load('Data/bullet.bmp'), \
+										self.objects['player'], 5)
+		characterGunObject.components['gunComponent'] = characterGunComponent
+		self.objects['gun'] = characterGunObject
+		self.objects['bulletContainer'] = bulletContainer
 		# camera
 		CameraController = GameObject(self)
 		CameraController.components['CameraController'] = GameComponentCameraController(CameraController)

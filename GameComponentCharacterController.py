@@ -26,8 +26,10 @@ class GameComponentCharacterController(GameComponent) :
 		prevRect = self.GetWorldRect()
 		if self.owner.owner.key_pressed[K_LEFT] :
 			self.vx -= CHARACTER_HORIZONTAL_SPEED
+			self.owner.horizontalDirection = -1
 		if self.owner.owner.key_pressed[K_RIGHT] :
 			self.vx += CHARACTER_HORIZONTAL_SPEED
+			self.owner.horizontalDirection = 1
 		for event in self.owner.owner.events :
 			if hasattr(event, 'key') :
 				if event.type == KEYDOWN and event.key == K_UP and self.isground :
@@ -35,12 +37,13 @@ class GameComponentCharacterController(GameComponent) :
 		self.owner.position[0] += self.vx
 		self.owner.position[1] += self.vy
 		self.isground = False
+		myRect = self.GetWorldRect()
 		for obj in DecomposeList(self.owner.owner.objects.values()) :
 			if obj == self.owner : continue
 			coll = obj.components.get('collider', 0)
 			if coll != 0 :
 				if not coll.static :
-					hcv = coll.GetHowColliding(prevRect, self.GetWorldRect())
+					hcv = coll.GetHowColliding(prevRect, myRect)
 					if hcv == False : continue
 					hcv = list(hcv)
 					if hcv[1] == 0 : 
