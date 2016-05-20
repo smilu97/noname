@@ -12,14 +12,16 @@ class SceneMapTest(Scene):
 		#LeftWall
 		LeftWall = GameObject(self, (-100.0,0.0,100.0,500.0), name='leftwall')
 		LeftWall_BoxCollider = GameComponentBoxCollider(LeftWall, (0.0,0.0,100.0,500.0))
-		LeftWall_Image = GameComponentImage(LeftWall, pygame.image.load('Data/wall.bmp'), [0.0,0.0])
+		LeftWall_Surface = pygame.Surface((100,500))
+		pygame.draw.rect(LeftWall_Surface, (255,255,0), (0,0,100,500))
+		LeftWall_Image = GameComponentImage(LeftWall, LeftWall_Surface, [0.0,0.0])
 		LeftWall.components['collider'] = LeftWall_BoxCollider
 		LeftWall.components['image'] = LeftWall_Image
 		self.objects['leftwall'] = LeftWall
 		#RightWall
 		RightWall = GameObject(self, (900.0,0.0,100.0,500.0), name='rightwall')
 		RightWall_BoxCollider = GameComponentBoxCollider(RightWall, (0.0,0.0,100.0,500.0))
-		RightWall_Image = GameComponentImage(RightWall, pygame.image.load('Data/wall.bmp'), [0.0,0.0])
+		RightWall_Image = GameComponentImage(RightWall, LeftWall_Surface, [0.0,0.0])
 		RightWall.components['collider'] = RightWall_BoxCollider
 		RightWall.components['image'] = RightWall_Image
 		self.objects['Rightwall'] = RightWall
@@ -32,7 +34,9 @@ class SceneMapTest(Scene):
 		terrain = GameObject(self, (0.0,400.0), name='terrain')
 		terrain_boxcollider = GameComponentBoxCollider(terrain, MAPTEST_TERRRAIN_RECT)
 		terrain.components['collider'] = terrain_boxcollider
-		terrain_image = GameComponentImage(terrain, pygame.image.load('Data/testmapTerrain.bmp'))
+		terrain_surface = pygame.Surface((1000,100))
+		pygame.draw.rect(terrain_surface, (255,255,0), (0,0,1000,100))
+		terrain_image = GameComponentImage(terrain, terrain_surface)
 		terrain.components['image'] = terrain_image
 		self.objects['terrain'] = terrain
 		# player
@@ -61,23 +65,25 @@ class SceneMapTest(Scene):
 		CameraController.components['CameraController'] = GameComponentCameraController(CameraController)
 		self.objects['camera'] = CameraController
 		# A_box
+		BoxSurface = pygame.Surface((100,50))
+		pygame.draw.rect(BoxSurface, (0,255,0), (0,0,100,50))
 		A_box = GameObject(self, (200.0, 350.0), name='A_box')
 		A_box_collider = GameComponentBoxCollider(A_box, (0.0,0.0,100.0,50.0))
-		A_box_image = GameComponentImage(A_box, pygame.image.load('Data/ABOXimage.bmp'))
+		A_box_image = GameComponentImage(A_box, BoxSurface)
 		A_box.components['collider'] = A_box_collider
 		A_box.components['image'] = A_box_image
 		self.objects['A_box'] = A_box
 		# B_box
 		B_box = GameObject(self, (300.0, 280.0), name='B_box')
 		B_box_collider = GameComponentBoxCollider(B_box, (0.0,0.0,100.0,50.0))
-		B_box_image = GameComponentImage(B_box, pygame.image.load('Data/ABOXimage.bmp'))
+		B_box_image = GameComponentImage(B_box, BoxSurface)
 		B_box.components['collider'] = B_box_collider
 		B_box.components['image'] = B_box_image
 		self.objects['B_box'] = B_box
 		# C_box
 		C_box = GameObject(self, (400.0, 210.0), name='C_box')
 		C_box_collider = GameComponentBoxCollider(C_box, (0.0,0.0,100.0,50.0))
-		C_box_image = GameComponentImage(C_box, pygame.image.load('Data/ABOXimage.bmp'))
+		C_box_image = GameComponentImage(C_box, BoxSurface)
 		C_box.components['collider'] = C_box_collider
 		C_box.components['image'] = C_box_image
 		self.objects['C_box'] = C_box

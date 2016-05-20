@@ -29,5 +29,5 @@ def DecomposeList(li) :
 		if type(obj) == type(dict()) :
 			dlist += DecomposeList(obj.values())
 		else :
-			dlist .append(obj)
+			dlist.append(obj)
 	return dlist

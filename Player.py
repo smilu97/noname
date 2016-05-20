@@ -1,6 +1,6 @@
 
 class Player():
-	def __init__(self, map=''):
+	def __init__(self, mapname=''):
 		self.position = [0.0,0.0]
-		self.map = map
+		self.mapname = mapname
 		
