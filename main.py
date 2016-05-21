@@ -4,8 +4,11 @@ from SceneMainMenu import *
 from SceneMapTest import *
 from SceneTetris import *
 from SceneAvoider import *
+from SceneDodge import *
 from Player import *
-SceneDic = {'MainMenu':SceneMainMenu, 'MapTest':SceneMapTest, 'Tetris':SceneTetris}
+
+SceneDic = {'MainMenu':SceneMainMenu, 'MapTest':SceneMapTest, 'Tetris':SceneTetris, \
+	'Dodge':SceneDodge}
 SceneStack = []
 if __name__ == '__main__' :
 	pygame.init()

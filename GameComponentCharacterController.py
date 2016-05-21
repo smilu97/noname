@@ -43,7 +43,7 @@ class GameComponentCharacterController(GameComponent) :
 			coll = obj.components.get('collider', 0)
 			if coll != 0 :
 				if not coll.static :
-					hcv = coll.GetHowColliding(prevRect, myRect)
+					hcv = coll.GetHowColliding((self.vx, self.vy), self.owner.components['collider'])
 					if hcv == False : continue
 					hcv = list(hcv)
 					if hcv[1] == 0 : 

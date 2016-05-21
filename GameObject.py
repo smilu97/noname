@@ -7,6 +7,8 @@ from GameComponentAnimator import *
 from GameComponentSpeech import *
 from GameComponentBulletController import *
 from GameComponentCharacterGun import *
+from GameComponentCircleCollider import *
+from GameComponentTopViewController import *
 
 class GameObject():
 	def __init__(self, owner, position=[0.0,0.0], components={}, name=''):
@@ -16,8 +18,6 @@ class GameObject():
 		self.name = str(name)
 		self.static = False
 	def Frame(self,dt):
-		for compo in self.components.values() :
-			compo.Frame(dt)
+		FrameAll(self.components.values(), dt)
 	def Render(self):
-		for compo in self.components.values() :
-			compo.Render()
+		RenderAll(self.components.values())

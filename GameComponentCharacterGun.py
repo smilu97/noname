@@ -17,8 +17,12 @@ class GameComponentCharacterGun(GameComponent):
 					if event.key == K_q :
 						self.MakeBullet()
 	def MakeBullet(self) :
+		if self.owner.owner.objects['player'].horizontalDirection == 1 :
+			bullet_angle = 0
+		else :
+			bullet_angle = math.pi
 		bullet = self.bulletClass(self.owner.owner, \
 					list([self.baseObject.position[0], self.baseObject.position[1] - 10]),\
-					 self.bulletImage, self.size, self.owner.owner.objects['player'].horizontalDirection)
+					 self.bulletImage, self.size, bullet_angle)
 		bullet.key = random.random()
 		self.bulletContainer[bullet.key] = bullet

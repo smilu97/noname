@@ -41,7 +41,8 @@ class SceneMapTest(Scene):
 		self.objects['terrain'] = terrain
 		# player
 		self.objects['player'] = GameObjectPlayer(self, list(PLAYER_SPAWNPOSITION), \
-									pygame.image.load('Data/character.bmp'), size=40.0, name='player')
+									pygame.image.load('Data/character.bmp'),\
+									  size=40.0, name='player')
 		self.objects['player'].components['hellotext'] = GameComponentImage(self.objects['player'], \
 															font.render('Hello!', True, (255,255,255)), position=[0,-40])
 		self.objects['player'].components['runanim'] = GameComponentAnimator(self.objects['player'], \
@@ -115,6 +116,9 @@ class SceneMapTest(Scene):
 				elif event.key == K_x :
 					self.objects['player'].position = [0.0,30.0]
 					self.objects['player'].components['controller'].vy = 0
+				elif event.key == K_g :
+					self.nextScene = 'Dodge'
+					self.nextSceneState = NEXTSCENE_STACK
 		FrameAll(self.objects.values(), self.dt)
 	def Render(self):
 		self.screen.fill((0,0,0))

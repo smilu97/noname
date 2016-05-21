@@ -31,3 +31,9 @@ def DecomposeList(li) :
 		else :
 			dlist.append(obj)
 	return dlist
+def RerangeAngle(angle) :
+	while angle > math.pi :
+		angle -= 2*math.pi
+	while angle < -math.pi :
+		angle += 2*math.pi
+	return angle
