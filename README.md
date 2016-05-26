@@ -1,55 +1,55 @@
 ### 베이스
 ---------------------------------
-- [ ] Box Collider 구현
-- [ ] Circle Collder 구현
-- [ ] Player Controller 구현
-- [ ] Top View Controller 구현
-- [ ] Image Component 구현
-- [ ] Button Component, Object 구현
-- [x] MoveMap Component 구현
-- [x] Map 수치화.
-- [x] Data Compression
-- [x] Map 설계
+- [x] Box Collider 구현
+- [x] Circle Collder 구현
+- [x] Player Controller 구현
+- [x] Top View Controller 구현
+- [x] Image Component 구현
+- [x] Button Component, Object 구현
+- [ ] MoveMap Component 구현
+- [ ] Map 수치화.
+- [ ] Data Compression
+- [ ] Map 설계
 
 ###그래픽
 ----------------------------------
-- [x] Player Image
-- [x] Start Map Images
-- [x] End Map Images
-- [x] Base Player Image
+- [ ] Player Image
+- [ ] Start Map Images
+- [ ] End Map Images
+- [ ] Base Player Image
 
-- [x] Rhythm Note Image
-- [x] Rhythm Effect Image
-- [x] Rhythm Background Image
+- [ ] Rhythm Note Image
+- [ ] Rhythm Effect Image
+- [ ] Rhythm Background Image
 
-- [x] Dodge Player Image
-- [x] Dodge Bullet Image
-- [x] Dodge Background Image
+- [ ] Dodge Player Image
+- [ ] Dodge Bullet Image
+- [ ] Dodge Background Image
 
-- [x] Mine Image
-- [x] Mine Digit Image
-- [x] Mine Block Image
+- [ ] Mine Image
+- [ ] Mine Digit Image
+- [ ] Mine Block Image
 
-- [x] Avoid Background Image
-- [x] Avoid Ball Image
-- [x] Avoid Player Image
+- [ ] Avoid Background Image
+- [ ] Avoid Ball Image
+- [ ] Avoid Player Image
 
 ### Dodge
 ----------------------------------
-- [ ] Bullet Controller
-- [ ] Collision(Player, Bullet)
-- [x] Optimization
-  - [ ] Apply numpy  
-  - [x] Optimizing calling components
-- [ ] Bullet Scenario Making script
-- [ ] Bullet Scenario Struct
-- [x] Bullet variation
+- [x] Bullet Controller
+- [x] Collision(Player, Bullet)
+- [ ] Optimization
+  - [x] Apply numpy  
+  - [ ] Optimizing calling components
+- [x] Bullet Scenario Making script
+- [x] Bullet Scenario Struct
+- [ ] Bullet variation
 
 ### Mine
 -----------------------------------
-- [ ] Rule
-- [x] Get Mouse Input
-- [x] Improve Graphic
+- [x] Rule
+- [ ] Get Mouse Input
+- [ ] Improve Graphic
 
 ### Avoid
 -----------------------------------
