@@ -19,6 +19,7 @@ Dodge(탄막게임), Avoid(피하기게임), Mine(지뢰찾기), Rhythm(원라�
 - [x] Top View Controller 구현
 - [x] Image Component 구현
 - [x] Button Component, Object 구현
+- [x] Speech 구현
 - [ ] MoveMap Component 구현
 - [ ] Map 수치화.
 - [ ] Data Compression
