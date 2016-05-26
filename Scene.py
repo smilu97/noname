@@ -19,6 +19,7 @@ class Scene():
 		self.dt = 0
 		self.dumpTime = False
 		self.spriteGroup = pygame.sprite.Group()
+		self.colliderList = []
 		# self.background = pygame.Surface()
 		# pygame.gfxdraw.box(self.background,(0,0,1600,800),(0,0,0))
 	def NextSceneInit(self) :

@@ -38,23 +38,21 @@ class GameComponentCharacterController(GameComponent) :
 		self.owner.position[1] += self.vy
 		self.isground = False
 		myRect = self.GetWorldRect()
-		for obj in DecomposeList(self.owner.owner.objects.values()) :
-			if obj == self.owner : continue
-			coll = obj.components.get('collider', 0)
-			if coll != 0 :
-				if not coll.static :
-					hcv = coll.GetHowColliding((self.vx, self.vy), self.ownCollider)
-					if hcv == False : continue
-					hcv = list(hcv)
-					if hcv[1] == 0 : 
-						self.owner.position[0] += (hcv[0]-1) * self.vx
-					elif hcv[1] == 1 : 
-						self.owner.position[1] += (hcv[0]-1) * self.vy
-					if hcv[1] == 1 :
-						if self.vy > 0 :
-							self.isground = True
-						else :
-							self.vy = 0
+		for coll in self.owner.owner.colliderList :
+			if coll.owner == self.owner : continue
+			if not coll.static :
+				hcv = coll.GetHowColliding((self.vx, self.vy), self.ownCollider)
+				if hcv == False : continue
+				hcv = list(hcv)
+				if hcv[1] == 0 : 
+					self.owner.position[0] += (hcv[0]-1) * self.vx
+				elif hcv[1] == 1 : 
+					self.owner.position[1] += (hcv[0]-1) * self.vy
+				if hcv[1] == 1 :
+					if self.vy > 0 :
+						self.isground = True
+					else :
+						self.vy = 0
 		if self.vx == 0 :
 			self.changeShow('idle')
 		else :

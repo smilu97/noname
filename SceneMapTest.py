@@ -55,7 +55,7 @@ class SceneMapTest(Scene):
 		self.objects['player'].components['controller'].ownCollider = \
 			self.objects['player'].components['collider']
 		# bullet[]
-		bulletContainer = {}
+		bulletContainer = []
 		characterGunObject = GameObject(self,name='gun')
 		characterGunComponent = GameComponentCharacterGun(characterGunObject,bulletContainer, \
 									GameObjectBullet, pygame.image.load('Data/bullet.bmp'), \

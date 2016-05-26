@@ -5,9 +5,16 @@ from GameComponent import *
 class GameComponentCircleCollider(GameComponent):
 	def __init__(self, owner, position, radius):
 		GameComponent.__init__(self,owner,position)
+		self.index = len(self.owner.owner.colliderList)
+		self.owner.owner.colliderList.append(self)
 		self.radius = radius
 		self.colliderType = 'circle'
 		self.static = False
+	def kill(self) :
+		cList = self.owner.owner.colliderList
+		for compo in cList[self.index+1:] :
+			compo.index -= 1
+		del cList[self.index]
 	def GetHowColliding(self, delta, otherCollider) :
 		if otherCollider.colliderType == 'box' :
 			return otherCollider.GetHowColliding((-delta[0],-delta[1]),self)

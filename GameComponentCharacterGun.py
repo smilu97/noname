@@ -24,5 +24,3 @@ class GameComponentCharacterGun(GameComponent):
 		bullet = self.bulletClass(self.owner.owner, \
 					list([self.baseObject.position[0], self.baseObject.position[1] - 10]),\
 					 self.bulletImage, self.size, bullet_angle)
-		bullet.key = random.random()
-		self.bulletContainer[bullet.key] = bullet

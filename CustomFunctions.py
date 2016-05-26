@@ -18,7 +18,7 @@ def RenderAll(objs) :
 	for obj in objs :
 		if type(obj) == type(list()) :
 			RenderAll(obj)
-		if type(obj) == type(dict()) :
+		elif type(obj) == type(dict()) :
 			RenderAll(obj.values())
 		else :
 			obj.Render()

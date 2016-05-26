@@ -36,8 +36,8 @@ class GameComponentBulletController(GameComponent):
 		self.basePositionAdder = np.array([math.cos(self.direction), math.sin(self.direction)]) * self.speed
 		self.rect = np.array((0.0,0.0,size,size))
 		self.timeCounter = 0
-	def Delete(self) :
-		del self.owner.owner.objects['bulletContainer'][self.owner.key]
+		self.player = self.owner.owner.objects['player']
+		self.collider = self.owner.components['collider']
 	def Frame(self,dt):
 		self.timeCounter += dt
 		shapeAdder = self.shapeFunc(self,self.timeCounter, dt)
@@ -47,14 +47,13 @@ class GameComponentBulletController(GameComponent):
 		px = self.owner.position[0]
 		py = self.owner.position[1]
 		if px < -200 or 1400 < px or py < -200 or 1000 < py :
-			self.Delete()
+			self.owner.kill()
+			return
 		myRect = self.GetWorldRect()
-		for obj in DecomposeList(self.owner.owner.objects.values()) :
-			if obj == self.owner : continue
-			if obj == self.owner.owner.objects['player'] : continue
-			coll = obj.components.get('collider', 0)
-			if coll != 0 :
-				if not coll.static :
-					if coll.GetIsColliding(self.owner.components['collider']) :
-						del self.owner.owner.objects['bulletContainer'][self.owner.key]
+		for coll in self.owner.owner.colliderList :
+			if coll.owner == self.owner : continue
+			if coll.owner == self.player : continue
+			if not coll.static :
+				if coll.GetIsColliding(self.collider) :
+					self.owner.kill()
 		

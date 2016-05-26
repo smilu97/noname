@@ -1,13 +1,20 @@
-import pygame, math, sys
+import pygame, math, sys, random
 from pygame.locals import *
 from GameComponent import *
 
 class GameComponentBoxCollider(GameComponent):
 	def __init__(self, owner, rect=np.array((0.0,0.0,0.0,0.0))):
 		GameComponent.__init__(self, owner)
-		self.rect = rect
+		self.index = len(self.owner.owner.colliderList)
+		self.owner.owner.colliderList.append(self)
+		self.rect = np.array(rect)
 		self.colliderType = 'box'
 		self.static = False
+	def kill(self) :
+		cList = self.owner.owner.colliderList
+		for compo in cList[self.index+1:] :
+			compo.index -= 1
+		del cList[self.index]
 	def GetHowColliding(self, delta, otherCollider) :
 		epsilon = 0.0000001
 		if otherCollider.colliderType == 'box' :
@@ -115,21 +122,9 @@ class GameComponentBoxCollider(GameComponent):
 				return False
 			if mine[3]-epsilon <= other[1]-other_radius : # Down
 				return False
-			if mine[1]+epsilon > other[0]+other_radius : # Up
+			if mine[1]+epsilon > other[1]+other_radius : # Up
 				return False
-			if abs(other[0] - mine[0]) < abs(other[0] - mine[2]) :
-				bx = mine[0]
-			else :
-				bx = mine[2]
-			if abs(other[1] - mine[1]) < abs(other[1] - mine[3]) :
-				by = mine[1]
-			else :
-				by = mine[3]
-			dx = bx - other[0]
-			dy = by - other[1]
-			if math.sqrt(dx**2 + dy**2) <= other_radius :
-				return True
-			return False
+			return True
 	def Frame(self,dt):
 		pass
 	def Render(self):
