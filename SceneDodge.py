@@ -7,22 +7,43 @@ class SceneDodge(Scene):
 	def __init__(self, screen, clock, player):
 		Scene.__init__(self, screen, clock, player)
 		# player
-		player = GameObjectPlayer(self,[600.0,400.0],pygame.image.load('Data/character.bmp'),40.0,'player')
+		player = GameObjectPlayer(self,[600.0,400.0],pygame.image.load('Data/character.bmp'), 40.0,'player')
 		player_showComponents = {'idle':player.components['image'],\
 							'leftmove':GameComponentImage(player,pygame.image.load('Data/leftmove.bmp')),\
 							'rightmove':GameComponentImage(player,pygame.image.load('Data/rightmove.bmp'))}
 		player_collider = GameComponentCircleCollider(player, (20.0,20.0), 20.0)
-		player_controller = GameComponentTopViewController(player, 1.0, 1.0, player_showComponents)
+		player_controller = GameComponentTopViewController(player, 0.3, 0.3, player_showComponents)
 		player.components['showComponents'] = player_showComponents
 		player.components['collider'] = player_collider
 		player.components['controller'] = player_controller
 		self.objects['player'] = player
 		# bullets
 		self.objects['bulletContainer'] = {}
-	def MakeTestChaseBullet(self) :
+		# bulletScenario
+		bulletMakerSet = (self.MakeSinBullet, self.MakeStraightBullet, \
+			self.MakeChasePlayerBullet)
+		bs_obj = GameObject(self)
+		bs_comp = GameComponentBulletScenario(bs_obj, 'Data/BulletScenario/output.txt', \
+			bulletMakerSet)
+		bs_obj.components['scenario'] = bs_comp
+		self.objects['scenario']  = bs_obj
+		# Console
+		console = GameObjectText(self, [0.0,0.0], 'comicsansms', 15)
+		self.objects['console'] = console
+	def MakeSinBullet(self, x, y, direction) :
 		randomKey = random.random()
-		bullet = GameObjectBullet(self,[600.0,300.0],pygame.image.load('Data/bullet.bmp'),\
-				5, math.pi/2, key=randomKey, bulletShape=BulletShapeChasePlayer, speed=0.1)
+		bullet = GameObjectBullet(self,[x,y],pygame.image.load('Data/bullet.bmp'),\
+				5, direction, key=randomKey, bulletShape=BulletShapeSin, speed=0.1)
+		self.objects['bulletContainer'][randomKey] = bullet
+	def MakeStraightBullet(self, x, y, direction) :
+		randomKey = random.random()
+		bullet = GameObjectBullet(self,[x,y],pygame.image.load('Data/bullet.bmp'),\
+				5, direction, key=randomKey, bulletShape=BulletShapeStraight, speed=0.1)
+		self.objects['bulletContainer'][randomKey] = bullet
+	def MakeChasePlayerBullet(self, x, y, direction) :
+		randomKey = random.random()
+		bullet = GameObjectBullet(self,[x,y],pygame.image.load('Data/bullet.bmp'),\
+				5, direction, key=randomKey, bulletShape=BulletShapeChasePlayer, speed=0.1)
 		self.objects['bulletContainer'][randomKey] = bullet
 	def Frame(self):
 		self.dt = self.clock.tick(60)
@@ -36,9 +57,10 @@ class SceneDodge(Scene):
 				if event.key == K_ESCAPE :
 					self.nextSceneState = NEXTSCENE_POP
 				if event.key == K_r :
-					self.MakeTestChaseBullet()
+					self.MakeSinBullet(600,300,math.pi/2)
+				if event.key == K_t :
+					self.MakeChasePlayerBullet(600,300,math.pi/2)
+				if event.key == K_y :
+					self.MakeStraightBullet(600,300,math.pi/2)
+				
 		FrameAll(self.objects.values(), self.dt)
-	def Render(self):
-		self.screen.fill((0,0,0))
-		RenderAll(self.objects.values())
-		pygame.display.flip()

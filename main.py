@@ -5,10 +5,11 @@ from SceneMapTest import *
 from SceneTetris import *
 from SceneAvoider import *
 from SceneDodge import *
+from SceneMineFinder import *
 from Player import *
 
 SceneDic = {'MainMenu':SceneMainMenu, 'MapTest':SceneMapTest, 'Tetris':SceneTetris, \
-	'Dodge':SceneDodge}
+	'Dodge':SceneDodge, 'MineFinder':SceneMineFinder}
 SceneStack = []
 if __name__ == '__main__' :
 	pygame.init()
@@ -31,5 +32,4 @@ if __name__ == '__main__' :
 				nextScene = nowScene.nextScene
 				nowScene.NextSceneInit()
 				SceneStack.append(nowScene)
-				nowScene = SceneDic[nextScene](screen, clock, player)
-			
+				nowScene = SceneDic[nextScene](screen, clock, player)			

@@ -1,9 +1,10 @@
 import math, sys
-
+import numpy as np
 def RotatePosition(position, degree) :
-	nx = position[0] * math.cos(degree) - position[1] * math.sin(degree)
-	ny = position[0] * math.sin(degree) + position[1] * math.cos(degree)
-	return (nx, ny)
+	cosValue = math.cos(degree)
+	sinValue = math.sin(degree)
+	rmat = np.array([[cosValue, -sinValue],[sinValue, cosValue]])
+	return np.dot(rmat, position)
 
 def FrameAll(objs, dt) :
 	for obj in objs :

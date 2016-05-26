@@ -43,6 +43,8 @@ class SceneMapTest(Scene):
 		self.objects['player'] = GameObjectPlayer(self, list(PLAYER_SPAWNPOSITION), \
 									pygame.image.load('Data/character.bmp'),\
 									  size=40.0, name='player')
+		self.objects['player'].components['collider'] = GameComponentBoxCollider(self.objects['player'], \
+															(0.0,0.0,40.0,40.0))
 		self.objects['player'].components['hellotext'] = GameComponentImage(self.objects['player'], \
 															font.render('Hello!', True, (255,255,255)), position=[0,-40])
 		self.objects['player'].components['runanim'] = GameComponentAnimator(self.objects['player'], \
@@ -50,8 +52,8 @@ class SceneMapTest(Scene):
 		self.objects['player'].components['controller'].showComponent = {'idle' : self.objects['player'].components['image'] ,\
 															'run' : self.objects['player'].components['runanim']}
 		self.objects['player'].components['image'].able = False
-		self.objects['player'].components['collider'] = GameComponentBoxCollider(self.objects['player'], \
-															(0.0,0.0,40.0,40.0))
+		self.objects['player'].components['controller'].ownCollider = \
+			self.objects['player'].components['collider']
 		# bullet[]
 		bulletContainer = {}
 		characterGunObject = GameObject(self,name='gun')
@@ -97,6 +99,9 @@ class SceneMapTest(Scene):
 									 'This is third speech testuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',''])
 		testSpeech.components['speech'] = testSpeech_speech
 		self.objects['testSpeech'] = testSpeech
+		# Console
+		console = GameObjectText(self, [0.0,60.0], 'comicsansms', 15)
+		self.objects['console'] = console
 	def PrintHello(self) :
 		print 'Hello!'
 	def Frame(self):
@@ -119,8 +124,8 @@ class SceneMapTest(Scene):
 				elif event.key == K_g :
 					self.nextScene = 'Dodge'
 					self.nextSceneState = NEXTSCENE_STACK
+				elif event.key == K_y :
+					self.nextScene = 'MineFinder'
+					self.nextSceneState = NEXTSCENE_STACK
 		FrameAll(self.objects.values(), self.dt)
-	def Render(self):
-		self.screen.fill((0,0,0))
-		RenderAll(self.objects.values())
-		pygame.display.flip()
+		self.spriteGroup.update()

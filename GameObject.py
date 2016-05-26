@@ -9,11 +9,13 @@ from GameComponentBulletController import *
 from GameComponentCharacterGun import *
 from GameComponentCircleCollider import *
 from GameComponentTopViewController import *
+from GameComponentText import *
+from GameComponentBulletScenario import *
 
 class GameObject():
 	def __init__(self, owner, position=[0.0,0.0], components={}, name=''):
 		self.owner = owner
-		self.position = list(position)
+		self.position = np.array(position)
 		self.components = dict(components)
 		self.name = str(name)
 		self.static = False

@@ -12,15 +12,20 @@ class GameComponentTopViewController(GameComponent):
 		pass
 	def Frame(self, dt):
 		key_pressed = self.owner.owner.key_pressed
+		hs = self.horizontalSpeed
+		vs = self.verticalSpeed
 		vx = vy = 0
+		if key_pressed[K_LALT] :
+			hs /= 2
+			vs /= 2
 		if key_pressed[K_LEFT] :
-			vx -= self.horizontalSpeed
+			vx -= hs
 		if key_pressed[K_RIGHT] :
-			vx += self.horizontalSpeed
+			vx += hs
 		if key_pressed[K_UP] :
-			vy -= self.verticalSpeed
+			vy -= vs
 		if key_pressed[K_DOWN] :
-			vy += self.verticalSpeed
+			vy += vs
 		self.owner.position[0] += vx * dt
 		self.owner.position[1] += vy * dt
 

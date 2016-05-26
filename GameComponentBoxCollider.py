@@ -3,7 +3,7 @@ from pygame.locals import *
 from GameComponent import *
 
 class GameComponentBoxCollider(GameComponent):
-	def __init__(self, owner, rect=(0.0,0.0,0.0,0.0)):
+	def __init__(self, owner, rect=np.array((0.0,0.0,0.0,0.0))):
 		GameComponent.__init__(self, owner)
 		self.rect = rect
 		self.colliderType = 'box'

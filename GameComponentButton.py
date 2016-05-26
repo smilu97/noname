@@ -11,8 +11,8 @@ class GameComponentButton(GameComponent):
 	def Frame(self,dt):
 		if self.onClick != 0 :
 			for event in self.owner.owner.events :
-				if event.type == pygame.MOUSEBUTTONDOWN :
-					mousepos = pygame.mouse.get_pos()
+				if event.type == MOUSEBUTTONDOWN :
+					mousepos = event.pos
 					if not self.owner.static :
 						mousepos = (mousepos[0] + self.owner.owner.cam[0], \
 									mousepos[1] + self.owner.owner.cam[1])

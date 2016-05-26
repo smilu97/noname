@@ -30,8 +30,3 @@ class SceneMainMenu(Scene):
 			obj.Frame(self.dt)
 	def OnStart(self) :
 		self.nextScene = 'MapTest'
-	def Render(self) :
-		self.screen.fill((0,0,0))
-		for obj in self.objects.values() :
-			obj.Render()
-		pygame.display.flip()
