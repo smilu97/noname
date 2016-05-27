@@ -55,6 +55,9 @@ Dodge(탄막게임), Avoid(피하기게임), Mine(지뢰찾기), Rhythm(원라�
 - [ ] Optimization
   - [x] Apply numpy  
   - [ ] Optimizing calling components
+    - [x] Image, Bullet, Collider Container 
+    - [x] Random Key Dictionary to Simple List
+    - [ ] ...
 - [x] Bullet Scenario Making script
 - [x] Bullet Scenario Struct
 - [ ] Bullet variation
