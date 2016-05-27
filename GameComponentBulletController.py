@@ -52,8 +52,9 @@ class GameComponentBulletController(GameComponent):
 		myRect = self.GetWorldRect()
 		for coll in self.owner.owner.colliderList :
 			if coll.owner == self.owner : continue
-			if coll.owner == self.player : continue
 			if not coll.static :
 				if coll.GetIsColliding(self.collider) :
 					self.owner.kill()
+					if coll.owner == self.player :
+						self.owner.owner.player.hp += 1
 		

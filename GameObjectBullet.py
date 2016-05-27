@@ -20,4 +20,4 @@ class GameObjectBullet(GameObject):
 		bContainer = self.owner.objects['bulletContainer']
 		for obj in bContainer[self.key+1:] :
 			obj.key -= 1
-		del bContainer[self.key]
+ 		del bContainer[self.key]

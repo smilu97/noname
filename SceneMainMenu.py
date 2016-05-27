@@ -9,7 +9,11 @@ class SceneMainMenu(Scene):
 	def __init__(self, screen, clock, player):
 		Scene.__init__(self, screen, clock, player)
 		font = pygame.font.SysFont('comicsansms', 25)
-		TestButton = GameObjectButton(self, font.render('Start', True, (255,255,255)), self.OnStart, (400,400,500,430))
+		StartText = font.render('Start', True, (255,255,255))
+		StartText_rect = StartText.get_rect()
+		StartText_rect[0] += 600
+		StartText_rect[1] += 400
+		TestButton = GameObjectButton(self, StartText, self.OnStart, StartText_rect)
 		self.objects['TestButton'] = TestButton
 		self.events = []
 		self.testvalue = 3

@@ -20,7 +20,7 @@ class GameComponentImage(GameComponent, pygame.sprite.Sprite):
 				self.rect.x = self.position[0] + self.owner.position[0] - cam[0]
 				self.rect.y = self.position[1] + self.owner.position[1] - cam[1]
 			else :
-				self.rect.x = self.position[0]
-				self.rect.y = self.position[1]
+				self.rect.x = self.position[0] + self.owner.position[0]
+				self.rect.y = self.position[1] + self.owner.position[1]
 		else :
 			self.image = self.blank

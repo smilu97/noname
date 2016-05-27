@@ -8,12 +8,14 @@ from SceneDodge import *
 from SceneMineFinder import *
 from Player import *
 
+SCREEN_SIZE = (1200,800)
+
 SceneDic = {'MainMenu':SceneMainMenu, 'MapTest':SceneMapTest, 'Tetris':SceneTetris, \
 	'Dodge':SceneDodge, 'MineFinder':SceneMineFinder}
 SceneStack = []
 if __name__ == '__main__' :
 	pygame.init()
-	screen = pygame.display.set_mode((1200,800))
+	screen = pygame.display.set_mode(SCREEN_SIZE)
 	clock = pygame.time.Clock()
 	player = Player()
 	nowScene = SceneMainMenu(screen, clock, player)

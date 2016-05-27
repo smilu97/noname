@@ -22,6 +22,13 @@ class Scene():
 		self.colliderList = []
 		# self.background = pygame.Surface()
 		# pygame.gfxdraw.box(self.background,(0,0,1600,800),(0,0,0))
+
+		# Console
+		console = GameObjectText(self, [0.0,400.0], 'comicsansms', 15, text='Console')
+		console.static = True
+		console.name = 'console'
+		self.console = console
+		self.objects['console'] = console
 	def NextSceneInit(self) :
 		self.nextScene = self
 		self.nextSceneState = NEXTSCENE_ERASE
@@ -30,3 +37,9 @@ class Scene():
 		RenderAll(self.objects.values())
 		self.spriteGroup.draw(self.screen)
 		pygame.display.flip()
+	def statInConsole(self) :
+		bContainer = self.objects['bulletContainer']
+		consoleString =  'len of spriteGroup     : ' + str(len(self.spriteGroup)) + '\n'
+		consoleString += 'len of bulletContainer : ' + str(len(bContainer)) + '\n'
+		consoleString += 'len of colliderList    : ' + str(len(self.colliderList)) + '\n'
+		self.objects['console'].changeText(consoleString)

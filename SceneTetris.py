@@ -98,18 +98,15 @@ class Tile :
 			self.setTetri(self.nowtetri_positions, BLOCK)
 			return False
 
-screen = pygame.display.set_mode((360, 660))
-clock = pygame.time.Clock()
-
-
 class System :
-	def __init__(self) :
+	def __init__(self, screen) :
 		self.blockSprite = pygame.image.load('Data/Tetris/block.bmp')
 		self.nonblockSprite = pygame.image.load('Data/Tetris/nonblock.bmp')
+		self.screen = screen
 	def printBlock(self,position) :
-		screen.blit(self.blockSprite, (position[0], position[1], position[0]+BLOCKSIZE, position[1]+BLOCKSIZE))
+		self.screen.blit(self.blockSprite, (position[0], position[1], position[0]+BLOCKSIZE, position[1]+BLOCKSIZE))
 	def printNonblock(self, position) :
-		screen.blit(self.nonblockSprite, (position[0], position[1], position[0]+BLOCKSIZE, position[1]+BLOCKSIZE))	
+		self.screen.blit(self.nonblockSprite, (position[0], position[1], position[0]+BLOCKSIZE, position[1]+BLOCKSIZE))	
 	def printScreen(self, tile) :
 		for i in range(WIDTH+2) :
 			self.printBlock([BLOCKSIZE*i, 0])
@@ -139,13 +136,13 @@ class System :
 class SceneTetris(Scene):
 	def __init__(self, screen, clock, player):
 		Scene.__init__(self, screen, clock, player)
-		self.gm = System()
+		self.gm = System(screen)
 		self.tile = Tile()
 		self.tile.makeTetri([5,2], tetri[random.randint(0,6)])
 		self.counter = 0
-
+		self.clock = clock
 	def Frame(self):
-		self.counter += clock.tick(30)
+		self.counter += self.clock.tick(30)
 		if not self.dumpTime :
 			self.dumpTime = True
 			self.counter = 0
@@ -173,7 +170,7 @@ class SceneTetris(Scene):
 						continue
 					self.gm.checkCompleteLine(self.tile)
 					self.tile.makeTetri([5,2], tetri[random.randint(0,6)])
-		screen.fill((0,0,0))
+		self.screen.fill((0,0,0))
 		self.gm.printScreen(self.tile)
 		pygame.display.flip()
 	def Render(self):

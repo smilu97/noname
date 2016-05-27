@@ -26,7 +26,9 @@ class SceneMapTest(Scene):
 		RightWall.components['image'] = RightWall_Image
 		self.objects['Rightwall'] = RightWall
 		#TestButton
-		TestButton = GameObjectButton(self, font.render('Print Hello!', True, (255,255,255)), self.PrintHello, (0.0,0.0,100.0,30.0), \
+		PrintHelloText = font.render('Print Hello!', True, (255,255,255))
+		PrintHelloText_rect = PrintHelloText.get_rect()
+		TestButton = GameObjectButton(self, font.render('Print Hello!', True, (255,255,255)), self.PrintHello, PrintHelloText_rect, \
 										'testbutton')
 		TestButton.static = True
 		self.objects['testbutton'] = TestButton
@@ -41,7 +43,7 @@ class SceneMapTest(Scene):
 		self.objects['terrain'] = terrain
 		# player
 		self.objects['player'] = GameObjectPlayer(self, list(PLAYER_SPAWNPOSITION), \
-									pygame.image.load('Data/character.bmp'),\
+									pygame.image.load('Data/character.png'),\
 									  size=40.0, name='player')
 		self.objects['player'].components['collider'] = GameComponentBoxCollider(self.objects['player'], \
 															(0.0,0.0,40.0,40.0))
@@ -99,15 +101,13 @@ class SceneMapTest(Scene):
 									 'This is third speech testuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',''])
 		testSpeech.components['speech'] = testSpeech_speech
 		self.objects['testSpeech'] = testSpeech
-		# Console
-		console = GameObjectText(self, [0.0,60.0], 'comicsansms', 15)
-		self.objects['console'] = console
 	def PrintHello(self) :
 		print 'Hello!'
 	def Frame(self):
 		self.dt = self.clock.tick(60)
 		self.events = pygame.event.get() 
 		self.key_pressed = pygame.key.get_pressed()
+		self.statInConsole()
 		if not self.dumpTime :
 			self.dt = 0
 			self.dumpTime = True

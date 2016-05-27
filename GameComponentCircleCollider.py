@@ -10,6 +10,8 @@ class GameComponentCircleCollider(GameComponent):
 		self.radius = radius
 		self.colliderType = 'circle'
 		self.static = False
+		self.width = radius * 2
+		self.height = radius * 2
 	def kill(self) :
 		cList = self.owner.owner.colliderList
 		for compo in cList[self.index+1:] :
