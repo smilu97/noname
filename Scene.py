@@ -2,6 +2,7 @@ from GameObjectButton import *
 from GameObjectPlayer import *
 from GameObjectBullet import *
 from GameObjectText import *
+from GameObjectPortal import *
 
 NEXTSCENE_POP = 0
 NEXTSCENE_ERASE = -1

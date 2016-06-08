@@ -10,4 +10,3 @@ class GameObjectPlayer(GameObject):
 		self.horizontalDirection = 1
 		self.components['controller'] = GameComponentCharacterController(self, (0, 0,\
 										self.size, self.size), showComponent)
-		self.hp = 10

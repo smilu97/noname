@@ -1,5 +1,8 @@
 import math, sys
 import numpy as np
+
+FRAME_RATE = 60
+
 def RotatePosition(position, degree) :
 	cosValue = math.cos(degree)
 	sinValue = math.sin(degree)

@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 import pygame, math, sys
 from pygame.locals import *
 from Scene import *
@@ -8,7 +9,7 @@ PLAYER_SPAWNPOSITION = [10.0,10.0]
 class SceneMapTest(Scene):
 	def __init__(self, screen, clock, player):
 		Scene.__init__(self,screen, clock, player)
-		font = pygame.font.SysFont('comicsansms', 25)
+		font = pygame.font.SysFont('nanumgothic', 25)
 		#LeftWall
 		LeftWall = GameObject(self, (-100.0,0.0,100.0,500.0), name='leftwall')
 		LeftWall_BoxCollider = GameComponentBoxCollider(LeftWall, (0.0,0.0,100.0,500.0))
@@ -30,7 +31,7 @@ class SceneMapTest(Scene):
 		PrintHelloText_rect = PrintHelloText.get_rect()
 		TestButton = GameObjectButton(self, font.render('Print Hello!', True, (255,255,255)), self.PrintHello, PrintHelloText_rect, \
 										'testbutton')
-		TestButton.static = True
+		TestButton.static = True 
 		self.objects['testbutton'] = TestButton
 		# terrain
 		terrain = GameObject(self, (0.0,400.0), name='terrain')
@@ -42,20 +43,19 @@ class SceneMapTest(Scene):
 		terrain.components['image'] = terrain_image
 		self.objects['terrain'] = terrain
 		# player
-		self.objects['player'] = GameObjectPlayer(self, list(PLAYER_SPAWNPOSITION), \
-									pygame.image.load('Data/character.png'),\
-									  size=40.0, name='player')
-		self.objects['player'].components['collider'] = GameComponentBoxCollider(self.objects['player'], \
+		self.playerObj = GameObjectPlayer(self, list(PLAYER_SPAWNPOSITION), pygame.image.load('Data/character.png'), 40.0, 'player')
+		self.objects['player'] = self.playerObj
+		self.playerObj.components['collider'] = GameComponentBoxCollider(self.playerObj, \
 															(0.0,0.0,40.0,40.0))
-		self.objects['player'].components['hellotext'] = GameComponentImage(self.objects['player'], \
+		self.playerObj.components['hellotext'] = GameComponentImage(self.playerObj, \
 															font.render('Hello!', True, (255,255,255)), position=[0,-40])
-		self.objects['player'].components['runanim'] = GameComponentAnimator(self.objects['player'], \
+		self.playerObj.components['runanim'] = GameComponentAnimator(self.playerObj, \
 														'Data/CharAnim')
-		self.objects['player'].components['controller'].showComponent = {'idle' : self.objects['player'].components['image'] ,\
-															'run' : self.objects['player'].components['runanim']}
-		self.objects['player'].components['image'].able = False
-		self.objects['player'].components['controller'].ownCollider = \
-			self.objects['player'].components['collider']
+		self.playerObj.components['controller'].showComponent = {'idle' : self.playerObj.components['image'] ,\
+															'run' : self.playerObj.components['runanim']}
+		self.playerObj.components['image'].able = False
+		self.playerObj.components['controller'].ownCollider = \
+			self.playerObj.components['collider']
 		# bullet[]
 		bulletContainer = []
 		characterGunObject = GameObject(self,name='gun')
@@ -69,38 +69,19 @@ class SceneMapTest(Scene):
 		CameraController = GameObject(self)
 		CameraController.components['CameraController'] = GameComponentCameraController(CameraController)
 		self.objects['camera'] = CameraController
-		# A_box
-		BoxSurface = pygame.Surface((100,50))
-		pygame.draw.rect(BoxSurface, (0,255,0), (0,0,100,50))
-		A_box = GameObject(self, (200.0, 350.0), name='A_box')
-		A_box_collider = GameComponentBoxCollider(A_box, (0.0,0.0,100.0,50.0))
-		A_box_image = GameComponentImage(A_box, BoxSurface)
-		A_box.components['collider'] = A_box_collider
-		A_box.components['image'] = A_box_image
-		self.objects['A_box'] = A_box
-		# B_box
-		B_box = GameObject(self, (300.0, 280.0), name='B_box')
-		B_box_collider = GameComponentBoxCollider(B_box, (0.0,0.0,100.0,50.0))
-		B_box_image = GameComponentImage(B_box, BoxSurface)
-		B_box.components['collider'] = B_box_collider
-		B_box.components['image'] = B_box_image
-		self.objects['B_box'] = B_box
-		# C_box
-		C_box = GameObject(self, (400.0, 210.0), name='C_box')
-		C_box_collider = GameComponentBoxCollider(C_box, (0.0,0.0,100.0,50.0))
-		C_box_image = GameComponentImage(C_box, BoxSurface)
-		C_box.components['collider'] = C_box_collider
-		C_box.components['image'] = C_box_image
-		self.objects['C_box'] = C_box
 		# testSpeech
 		testSpeech = GameObject(self, (0.0,30.0), name='testSpeech')
 		testSpeech.static = True
-		testSpeech_speech = GameComponentSpeech(testSpeech, [0.0,0.0], 'comicsansms', 30)
+		testSpeech_speech = GameComponentSpeech(testSpeech, [0.0,0.0], 'nanumgothic', 30)
 		testSpeech_speech.SetText(['This is speech testuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',\
 									'This is second speech testuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu', \
-									 'This is third speech testuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',''])
+									 'This is third speech testuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu',
+									 u'이것은 한글 테스트입니다.',''])
 		testSpeech.components['speech'] = testSpeech_speech
 		self.objects['testSpeech'] = testSpeech
+		# portal
+		chongPortal = GameObjectPortal(self, np.array(0,460), pygame.image.load("Data/portal.png"), self.playerObj.components['collider'], \
+						"Chongjang");
 	def PrintHello(self) :
 		print 'Hello!'
 	def Frame(self):
@@ -126,6 +107,12 @@ class SceneMapTest(Scene):
 					self.nextSceneState = NEXTSCENE_STACK
 				elif event.key == K_y :
 					self.nextScene = 'MineFinder'
+					self.nextSceneState = NEXTSCENE_STACK
+				elif event.key == K_t :
+					self.nextScene = 'Avoider'
+					self.nextSceneState = NEXTSCENE_STACK
+				elif event.key == K_r :
+					self.nextScene = 'Rhythm'
 					self.nextSceneState = NEXTSCENE_STACK
 		FrameAll(self.objects.values(), self.dt)
 		self.spriteGroup.update()
