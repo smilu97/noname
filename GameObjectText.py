@@ -5,7 +5,7 @@ class GameObjectText(GameObject):
 		GameObject.__init__(self,owner,position, name='console')
 		self.text = text
 		self.texts = text.split('\n')
-		self.font = pygame.font.SysFont(fontName, fontSize)
+		self.font = pygame.font.Font(fontName, fontSize)
 		for i in range(len(self.texts)) :
 			self.components['image'+str(i)] = GameComponentImage(self, self.font.render(self.texts[i], True, fontColor), (0.0, fontSize*i), True)
 		self.fontName = fontName

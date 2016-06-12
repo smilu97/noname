@@ -1,4 +1,5 @@
 import pygame, math, sys
+
 from pygame.locals import *
 from Scene import *
 import random
@@ -25,6 +26,7 @@ class SceneDodge(Scene):
 		self.objects['player'] = player
 		# bullets
 		self.objects['bulletContainer'] = []
+		self.bContainer = self.objects['bulletContainer']
 		# bulletScenario
 		bulletMakerSet = (self.MakeSinBullet, self.MakeStraightBullet, \
 			self.MakeChasePlayerBullet)
@@ -73,6 +75,8 @@ class SceneDodge(Scene):
 		UpWall.components['collider'] = UpWall_BoxCollider
 		UpWall.components['image'] = UpWall_Image
 		self.objects['upwall'] = UpWall
+
+		self.timer = 0
 	def MakeSinBullet(self, x, y, direction) :
 		bullet = GameObjectBullet(self,[x,y],pygame.image.load('Data/bullet.bmp'),\
 				5, direction, bulletShape=BulletShapeSin, speed=0.1)
@@ -86,8 +90,16 @@ class SceneDodge(Scene):
 		self.dt = self.clock.tick(60)
 		self.events = pygame.event.get() 
 		self.key_pressed = pygame.key.get_pressed()
-		self.statInConsole()
-		self.console.addText('count : ' + str(self.player.hp) + '\n')
+		if self.player.hp > 7 :
+			self.nextScene = 'Dodge'
+		if self.timer < 2000 :
+			self.timer += self.dt
+		else :
+			if len(self.bContainer) == 0 :
+				self.nextScene = 'WorldMap'
+				self.player.story = 4
+				self.player.pos[0] = 2200
+				self.player.pos[1] = 1867
 		bContainer = self.objects['bulletContainer']
 		for img in self.spriteGroup :
 			if hasattr(img.owner, 'key') :
@@ -100,11 +112,9 @@ class SceneDodge(Scene):
 			if hasattr(event, 'key') and event.type == KEYDOWN :
 				if event.key == K_ESCAPE :
 					self.nextSceneState = NEXTSCENE_POP
-				if event.key == K_r :
-					self.MakeSinBullet(600,300,math.pi/2)
-				if event.key == K_t :
-					self.MakeChasePlayerBullet(600,300,math.pi/2)
-				if event.key == K_y :
-					self.MakeStraightBullet(600,300,math.pi/2)
-				
+		if self.key_pressed[K_p] :
+			self.nextScene = 'WorldMap'
+			self.player.story = 4
+			self.player.pos[0] = 2200
+			self.player.pos[1] = 1867
 		FrameAll(self.objects.values(), self.dt)

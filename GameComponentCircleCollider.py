@@ -51,3 +51,9 @@ class GameComponentCircleCollider(GameComponent):
 			if distance < self.radius + otherCollider.radius :
 				return True
 			return False
+	def GetIsCollidingWithRawCircle(self, other, radius) :
+		delta = self.GetWorldPosition() - np.array(other)
+		dist = math.hypot(delta[0], delta[1])
+		if dist < radius + self.radius :
+			return True
+		return False

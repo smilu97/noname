@@ -15,6 +15,7 @@ class GameComponentCharacterController(GameComponent) :
 		self.width = rect[2] - rect[0]
 		self.height = rect[3] - rect[1]
 		self.isground = False
+		self.grap = False
 		self.showComponent = dict(showComponent)
 	def changeShow(self, val) :
 		for compo in self.showComponent.values() :
@@ -24,12 +25,13 @@ class GameComponentCharacterController(GameComponent) :
 		self.vx = 0.0
 		self.vy += CHARACTER_GRAVITY
 		prevRect = self.GetWorldRect()
-		if self.owner.owner.key_pressed[K_LEFT] :
-			self.vx -= CHARACTER_HORIZONTAL_SPEED
-			self.owner.horizontalDirection = -1
-		if self.owner.owner.key_pressed[K_RIGHT] :
-			self.vx += CHARACTER_HORIZONTAL_SPEED
-			self.owner.horizontalDirection = 1
+		if not self.grap :
+			if self.owner.owner.key_pressed[K_LEFT] :
+				self.vx -= CHARACTER_HORIZONTAL_SPEED
+				self.owner.horizontalDirection = -1
+			if self.owner.owner.key_pressed[K_RIGHT] :
+				self.vx += CHARACTER_HORIZONTAL_SPEED
+				self.owner.horizontalDirection = 1
 		for event in self.owner.owner.events :
 			if hasattr(event, 'key') :
 				if event.type == KEYDOWN and event.key == K_UP and self.isground :

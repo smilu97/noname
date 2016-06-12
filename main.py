@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import pygame, math, sys
 from pygame.locals import *
 from SceneMainMenu import *
@@ -7,15 +9,17 @@ from SceneAvoider import *
 from SceneDodge import *
 from SceneMineFinder import *
 from SceneRhythm import *
-from SceneChongjang import *
+from SceneWorldMap import *
 from SceneProlog import *
+from SceneClassRoom import *
+from SceneEpilog import *
 from Player import *
 
 SCREEN_SIZE = (1200,800)
 
 SceneDic = {'MainMenu':SceneMainMenu, 'MapTest':SceneMapTest, 'Tetris':SceneTetris, \
 	'Dodge':SceneDodge, 'MineFinder':SceneMineFinder, 'Avoider':SceneAvoider, 'Rhythm':SceneRhythm, \
-	'Prolog':SceneProlog, 'Chongjang':SceneChongjang}
+	'Prolog':SceneProlog, 'WorldMap':SceneWorldMap, 'ClassRoom':SceneClassRoom, 'Epilog':SceneEpilog}
 SceneStack = []
 if __name__ == '__main__' :
 	pygame.init()
@@ -23,7 +27,7 @@ if __name__ == '__main__' :
 	screen = pygame.display.set_mode(SCREEN_SIZE)
 	clock = pygame.time.Clock()
 	player = Player()
-	nowScene = SceneProlog(screen, clock, player)
+	nowScene = SceneMainMenu(screen, clock, player)
 	while True :
 		nowScene.Frame()
 		nowScene.Render()

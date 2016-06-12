@@ -1,4 +1,4 @@
-import pygame, math, sys
+import pygame, math, sys, random
 from pygame.locals import *
 from Scene import *
 
@@ -7,9 +7,11 @@ class SceneAvoider(Scene):
 	def __init__(self, screen, clock, player):
 		Scene.__init__(self, screen, clock, player)
 		self.obList = []
-		self.Load('Data/Avoid/Scenario/Test.txt')
+		# self.Load('Data/Avoid/Scenario/Test.txt')
+		for i in range(15) :
+			self.obList.append([3000+i*800, random.randint(300, 800)])
 		self.obY = []
-		self.px = 0
+		self.px = 550
 		self.py = 700
 		self.speed = 0.5
 		self.timeCounter = 0
@@ -19,6 +21,7 @@ class SceneAvoider(Scene):
 		self.charSize = 100
 		self.charImage = pygame.transform.scale(self.charImage, (self.charSize, self.charSize))
 		self.obImage = pygame.transform.scale(self.obImage, (self.obSize, self.obSize))
+		self.timer = 0
 	def Load(self, path) :
 		ifile = open(path, 'r')
 		self.obList = list()
@@ -29,17 +32,34 @@ class SceneAvoider(Scene):
 		self.timeCounter += self.dt
 		self.events = pygame.event.get() 
 		self.key_pressed = pygame.key.get_pressed()
+		if self.key_pressed[K_p] :
+			self.nextScene = 'WorldMap'
+			self.player.story = 6
+			self.player.pos[0] = 4721
+			self.player.pos[1] = 827
+		if self.timer < 15000 :
+			self.timer += self.dt
+		else :
+			self.nextScene = 'WorldMap'
+			self.player.story = 6
+			self.player.pos[0] = 4721
+			self.player.pos[1] = 827
 		if not self.dumpTime :
 			self.dt = 0
 			self.dumpTime = True
 		for event in self.events : 
 			if hasattr(event, 'key') and event.type == KEYDOWN :
-				if event.key == K_ESCAPE :
-					self.nextSceneState = NEXTSCENE_POP
+				pass
 		if self.key_pressed[K_LEFT] :
 			self.px -= self.speed * self.dt
+			if self.px < 300 :
+				self.px = 300
 		if self.key_pressed[K_RIGHT] :
 			self.px += self.speed * self.dt
+			if self.px > 800 :
+				self.px = 800
+		if self.key_pressed[K_ESCAPE] :
+			self.nextSceneState = NEXTSCENE_POP
 		self.obY = list()
 		for i in range(len(self.obList)) :
 			posy = self.obList[i][0] - self.timeCounter
@@ -52,7 +72,8 @@ class SceneAvoider(Scene):
 			dy = posy - self.py
 			dis = math.hypot(dx,dy)
 			if dis < (self.obSize + self.charSize) / 2 :
-				print 'collision!!'
+				self.nextScene = 'Avoider'
+				return
 			self.obY.append(posy)
 	def Render(self) :
 		self.screen.fill((0,0,0))

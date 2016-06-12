@@ -7,7 +7,7 @@ class GameComponentText(GameComponent):
 		GameComponent.__init__(self, owner, position)
 		self.fontName = fontName
 		self.text = text
-		self.font = pygame.font.SysFont(self.fontName, fontSize)
+		self.font = pygame.font.Font(self.fontName, fontSize)
 		self.fontColor = fontColor
 		self.textImage = self.font.render(self.text, True, self.fontColor)
 	def UpdateImage(self) :

@@ -3,12 +3,6 @@ import numpy as np
 
 outlist = []
 time = 0
-def makeRoundCurtain(btype, pos, angle, num, radius=40) :
-	theta = angle[0]
-	deltaAngle = (angle[1]-angle[0])/num
-	while theta <= angle[1] :
-		outlist.append([time, btype, pos[0] + radius*math.cos(theta), pos[1] + radius*math.sin(theta), theta])
-		theta += deltaAngle
 
 def save() :
 	outstring = ''
@@ -18,7 +12,7 @@ def save() :
 		outstring = outstring[:-1]
 		outstring += '\n'
 	outstring = outstring[:-1]
-	ofile = open('Data/BulletScenario/output.txt', 'w')
+	ofile = open('Data/AvoidScenario/output.txt', 'w')
 	ofile.write(outstring)
 	ofile.close()
 

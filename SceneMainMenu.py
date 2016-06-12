@@ -8,15 +8,8 @@ class SceneMainMenu(Scene):
 	"""docstring for MainMenu"""
 	def __init__(self, screen, clock, player):
 		Scene.__init__(self, screen, clock, player)
-		font = pygame.font.SysFont('comicsansms', 25)
-		StartText = font.render('Start', True, (255,255,255))
-		StartText_rect = StartText.get_rect()
-		StartText_rect[0] += 600
-		StartText_rect[1] += 400
-		TestButton = GameObjectButton(self, StartText, self.OnStart, StartText_rect)
-		self.objects['TestButton'] = TestButton
-		self.events = []
-		self.testvalue = 3
+		font = pygame.font.Font('ttf/NanumGothic.ttf', 25)
+		self.bg_img = pygame.image.load('Data/MainMenu.png')
 	def Frame(self) :
 		self.dt = self.clock.tick(60)
 		if not self.dumpTime :
@@ -24,13 +17,23 @@ class SceneMainMenu(Scene):
 			self.dt = 0
 		self.events = pygame.event.get()
 		self.key_pressed = pygame.key.get_pressed()
+		if self.key_pressed[K_ESCAPE] :
+			self.nextSceneState = NEXTSCENE_POP
+		if self.key_pressed[K_RETURN] :
+			self.OnStart()
 		for event in self.events :
-			if hasattr(event, 'key') :
-				if event.key == K_ESCAPE :
-					self.nextSceneState = NEXTSCENE_POP
-				if event.key == K_RETURN :
-					self.OnStart()
+			if event.type == MOUSEBUTTONDOWN :
+				if event.button == 1 :
+					pos = event.pos
+					if 50 < pos[0] and pos[0] < 300 and 500 < pos[1] and pos[1] < 750 :
+						self.OnStart()
 		for obj in self.objects.values() :
 			obj.Frame(self.dt)
 	def OnStart(self) :
-		self.nextScene = 'MapTest'
+		self.nextScene = 'Prolog'
+	def Render(self) :
+		self.screen.fill((0,0,0))
+		self.screen.blit(self.bg_img, (0,0))
+		RenderAll(self.objects.values())
+		self.spriteGroup.draw(self.screen)
+		pygame.display.flip()

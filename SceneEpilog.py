@@ -4,16 +4,18 @@ import pygame, math, sys
 from pygame.locals import *
 from Scene import *
 
-class SceneProlog(Scene):
+class SceneEpilog(Scene):
 	def __init__(self, screen, clock, player):
 		Scene.__init__(self, screen, clock, player)
 		self.font = pygame.font.Font('ttf/NanumGothic.ttf', 25)
 		centerSpeech_obj = GameObject(self, (300,300), name='centerSpeech')
 		centerSpeech_speech = GameComponentSpeech(centerSpeech_obj,[0,0],'comicsansms',30,(255,255,255))
 		centerSpeech_speech.font = pygame.font.Font('ttf/NanumGothic.ttf', 25)
-		centerSpeech_speech.SetText([u'공 대생(20)은 한양대학교 컴퓨터공학과 16학번 새내기이다.',
-										u'치열한 입시 끝에 행복한 대학생활을 기대했지만',
-										u'그것은 크나큰 착각이었다.',''])
+		centerSpeech_speech.SetText([u"석양이 진다...",
+										u"대생이의 재미있는 하루는 그렇게 가고 있었다",
+										u"그러나 그는 잊고 있다",
+										u"기말고사가 코 앞이라는 것을",
+										u"그의 학점 또한 지고 있었다는 것을"])
 		centerSpeech_obj.components['speech'] = centerSpeech_speech
 		self.objects['centerspeech'] = centerSpeech_obj
 		self.spch = centerSpeech_speech
@@ -27,9 +29,7 @@ class SceneProlog(Scene):
 		if self.spch.level == len(self.spch.text)-1 :
 			if self.timeCounter == 0 : self.timeCounter = 1
 		if self.timeCounter > 1000 :
-			self.nextScene = 'WorldMap'
-			self.player.pos[0] = 3445.0
-			self.player.pos[1] = 3450.0
+			self.nextSceneState = NEXTSCENE_POP
 			return
 		if not self.dumpTime :
 			self.dt = 0
@@ -45,7 +45,6 @@ class SceneProlog(Scene):
 		self.screen.fill((0,0,0))
 		RenderAll(self.objects.values())
 		self.spriteGroup.draw(self.screen)
-		self.screen.blit(self.font.render(u'Z키로 진행', True, (255,255,255)), (0,500))
 		pygame.display.flip()
 
 

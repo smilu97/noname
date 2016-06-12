@@ -9,7 +9,7 @@ PLAYER_SPAWNPOSITION = [10.0,10.0]
 class SceneMapTest(Scene):
 	def __init__(self, screen, clock, player):
 		Scene.__init__(self,screen, clock, player)
-		font = pygame.font.SysFont('nanumgothic', 25)
+		font = pygame.font.Font('ttf/nanumgothic.ttf', 25)
 		#LeftWall
 		LeftWall = GameObject(self, (-100.0,0.0,100.0,500.0), name='leftwall')
 		LeftWall_BoxCollider = GameComponentBoxCollider(LeftWall, (0.0,0.0,100.0,500.0))
@@ -51,8 +51,8 @@ class SceneMapTest(Scene):
 															font.render('Hello!', True, (255,255,255)), position=[0,-40])
 		self.playerObj.components['runanim'] = GameComponentAnimator(self.playerObj, \
 														'Data/CharAnim')
-		self.playerObj.components['controller'].showComponent = {'idle' : self.playerObj.components['image'] ,\
-															'run' : self.playerObj.components['runanim']}
+		self.playerObj.components['controller'].showComponent = {'idle' : self.playerObj.components['image'] , \
+														'run' : self.playerObj.components['runanim']}
 		self.playerObj.components['image'].able = False
 		self.playerObj.components['controller'].ownCollider = \
 			self.playerObj.components['collider']
@@ -67,7 +67,7 @@ class SceneMapTest(Scene):
 		self.objects['bulletContainer'] = bulletContainer
 		# camera
 		CameraController = GameObject(self)
-		CameraController.components['CameraController'] = GameComponentCameraController(CameraController)
+		CameraController.components['CameraController'] = GameComponentCameraController(CameraController, self.playerObj)
 		self.objects['camera'] = CameraController
 		# testSpeech
 		testSpeech = GameObject(self, (0.0,30.0), name='testSpeech')
@@ -80,8 +80,9 @@ class SceneMapTest(Scene):
 		testSpeech.components['speech'] = testSpeech_speech
 		self.objects['testSpeech'] = testSpeech
 		# portal
-		chongPortal = GameObjectPortal(self, np.array(0,460), pygame.image.load("Data/portal.png"), self.playerObj.components['collider'], \
-						"Chongjang");
+		chongPortal = GameObjectPortal(self, np.array((500,360)), pygame.image.load("Data/portal.png"), \
+											self.playerObj.components['collider'], 'Chongjang')
+		self.objects['chongPortal'] = chongPortal
 	def PrintHello(self) :
 		print 'Hello!'
 	def Frame(self):

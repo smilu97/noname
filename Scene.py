@@ -24,12 +24,12 @@ class Scene():
 		# self.background = pygame.Surface()
 		# pygame.gfxdraw.box(self.background,(0,0,1600,800),(0,0,0))
 
-		# Console
-		console = GameObjectText(self, [0.0,400.0], 'comicsansms', 15, text='Console')
-		console.static = True
-		console.name = 'console'
-		self.console = console
-		self.objects['console'] = console
+		# # Console
+		# console = GameObjectText(self, [0.0,400.0], 'comicsansms', 15, text='Console')
+		# console.static = True
+		# console.name = 'console'
+		# self.console = console
+		# self.objects['console'] = console
 	def NextSceneInit(self) :
 		self.nextScene = self
 		self.nextSceneState = NEXTSCENE_ERASE

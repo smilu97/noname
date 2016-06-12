@@ -15,7 +15,7 @@ class SceneRhythm(Scene):
         self.downarrowImage = pygame.image.load('Data/arrow/down.png')
         self.rightarrowImage = pygame.image.load('Data/arrow/right.png')
         self.leftarrowImage = pygame.image.load('Data/arrow/left.png')
-        self.font = pygame.font.SysFont('comicsansms', 25)
+        self.font = pygame.font.Font('ttf/NanumGothic.ttf', 25)
         self.point = 0
     def Frame(self) :
         dt = self.clock.tick(FRAME_RATE)
